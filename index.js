@@ -5,3 +5,17 @@ var T = new Twit({
 	access_token: '';
 	access_token_secret: '';
 });
+
+T.get('account/verify_credentials', {
+	include_entities: false,
+	skip_status: true,
+	include_email: false
+}, onAuthenticated)
+
+function onAuthenticated(err, res){
+	if(err){
+		throw err
+	}
+
+	console.log('Authentication successful. Running bot ...\r\n');
+}
