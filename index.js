@@ -18,4 +18,6 @@ function onAuthenticated(err, res){
 	}
 
 	console.log('Authentication successful. Running bot ...\r\n');
+
+	var stream = T.stream('user');
 }
