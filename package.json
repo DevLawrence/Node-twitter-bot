@@ -4,6 +4,7 @@
   "description": "A NodeJs twitter bot that automatically tweets a response to a user when they follow the account",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
