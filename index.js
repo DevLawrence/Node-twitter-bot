@@ -42,3 +42,11 @@ function onError(error){
 T.post('statuses/update', {
 	status: response
 }, onTweeted)
+
+function onTweeted(err, reply){
+	if(err !== undefined){
+		console.log(err)
+	} else {
+		console.log('Tweeted: ' + reply.text)
+	}
+}
