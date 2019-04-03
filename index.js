@@ -20,4 +20,21 @@ function onAuthenticated(err, res){
 	console.log('Authentication successful. Running bot ...\r\n');
 
 	var stream = T.stream('user');
+
+	stream.on('follow', onFollowed)
+	stream.on('error', onError)
+}
+
+function onFollowed(event){
+	var name = event.source.name
+	var screenName = event.source.screen_name
+	var response  = '@' + screenName + 'new follower, this is an automated response bot built using NodeJS for ' + name 
+
+	//tweet response to user here
+
+	console.log('I was followed by: ' + name + '@' + screenName)
+}
+
+function onError(error){
+	throw error
 }
