@@ -38,3 +38,7 @@ function onFollowed(event){
 function onError(error){
 	throw error
 }
+
+T.post('statuses/update', {
+	status: response
+}, onTweeted)
